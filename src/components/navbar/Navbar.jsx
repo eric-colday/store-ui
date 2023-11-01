@@ -4,9 +4,11 @@ import Link from "next/link";
 import React, { useContext, useState } from "react";
 import styles from "./navbar.module.css";
 import PersonIcon from "@mui/icons-material/Person";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
+import { Badge } from "@mui/material";
 import { ThemeContext } from "@/context/ThemeContext";
 
 const links = [
@@ -41,7 +43,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className={styles.container}
+    <div
+      className={styles.container}
       style={
         theme === "dark"
           ? { backgroundColor: "#0D1520" }
@@ -73,7 +76,8 @@ const Navbar = () => {
             }
           />
         )}
-        <div className={showLinks ? styles.linksContainer : styles.links}
+        <div
+          className={showLinks ? styles.linksContainer : styles.links}
           style={
             theme === "dark"
               ? { backgroundColor: "#0D1520" }
@@ -99,6 +103,14 @@ const Navbar = () => {
         </div>
         <Link href="/connexion">
           <PersonIcon />
+        </Link>
+        <Link href="/cart">
+          <Badge
+            badgeContent="2"
+            color= "primary"
+          >
+            <ShoppingCartIcon />
+          </Badge>
         </Link>
       </div>
     </div>
