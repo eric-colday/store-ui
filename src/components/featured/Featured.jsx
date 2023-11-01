@@ -4,9 +4,8 @@ import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext } from "react";
 import styles from "./featured.module.css";
 import { Items } from "./data";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-
-
 
 const getData = () => {
   const data = Items;
@@ -34,25 +33,27 @@ const Featured = () => {
       <div className={styles.containerProducts}>
         <div className={styles.grid}>
           {data.map((item) => (
-            <div
-              className={styles.card}
-              style={
-                theme === "dark"
-                  ? { backgroundColor: "#0D2847" }
-                  : { backgroundColor: "#FBFDFF" }
-              }
-            >
-              <img
-                src={item.image}
-                alt="featured1"
-                className={styles.cardImage}
-              />
-              <div className={styles.cardContent}>
-                <h3 className={styles.h3}>{item.name}</h3>
-                <p className={styles.p}>{item.description}</p>
-                <p className={styles.p}>{item.price}€</p>
+            <Link href={`/produit/${item.id}`}>
+              <div
+                className={styles.card}
+                style={
+                  theme === "dark"
+                    ? { backgroundColor: "#0D2847" }
+                    : { backgroundColor: "#FBFDFF" }
+                }
+              >
+                <img
+                  src={item.image}
+                  alt="featured1"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.h3}>{item.name}</h3>
+                  <p className={styles.p}>{item.description}</p>
+                  <p className={styles.p}>{item.price}€</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -52,7 +52,7 @@ const Navbar = () => {
       }
     >
       <Link href="/" className={styles.logo}>
-        NecStore
+        <h1>NecStore</h1>
       </Link>
       <div className={styles.content}>
         <ThemeToggle />
@@ -105,10 +105,7 @@ const Navbar = () => {
           <PersonIcon />
         </Link>
         <Link href="/cart">
-          <Badge
-            badgeContent="2"
-            color= "primary"
-          >
+          <Badge badgeContent="2" color="primary">
             <ShoppingCartIcon />
           </Badge>
         </Link>

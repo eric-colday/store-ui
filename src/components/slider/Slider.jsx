@@ -36,15 +36,15 @@ const Slider = () => {
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <img src={data[0]} alt="" className={styles.img} />
-        <img src={data[1]} alt="" className={styles.img}/>
-        <img src={data[2]} alt="" className={styles.img}/>
+        <img src={data[1]} alt="" className={styles.img} />
+        <img src={data[2]} alt="" className={styles.img} />
       </div>
       <div className={styles.icons}>
         <div
           className={styles.icon}
           onClick={prevSlide}
           style={{
-            border: "2px solid #468bff",  
+            border: "2px solid #468bff",
           }}
         >
           <WestOutlinedIcon
@@ -66,6 +66,17 @@ const Slider = () => {
             }}
           />
         </div>
+      </div>
+      <div className={styles.bannerContent}>
+        <h2 className={styles.h2}>NecStore</h2>
+        <p className={styles.p}>
+        Une collection tendance de t-shirts, 
+        jeans et vestes pour un style unique. 
+        Exprimez-vous avec notre mode de qualité !
+        </p>
+        <button className={`${styles.btn} ${styles.btnPrimary}`}>
+          Découvrir
+        </button>
       </div>
     </div>
   );

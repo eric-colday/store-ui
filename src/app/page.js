@@ -1,3 +1,4 @@
+import Banner from "@/components/banner/Banner";
 import Featured from "@/components/featured/Featured";
 import Slider from "@/components/slider/Slider";
 import Image from "next/image";
@@ -7,7 +8,8 @@ export default function Home() {
   return (
     <div className={styles.accueil}>
       <Slider />
-      <Featured/>
+      <Featured />
+      <Banner />
     </div>
   );
 }

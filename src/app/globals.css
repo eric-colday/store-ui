@@ -105,17 +105,24 @@ a {
 }
 
 .light {
-  background-color: #FBFDFF;
+  background-color: #fbfdff;
   color: #111;
 }
 
 .dark {
-  background-color: #0D1520;
+  background-color: #0d1520;
   color: #bbb;
 }
+
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  button{
+    font-size: 1rem;
   }
 }
