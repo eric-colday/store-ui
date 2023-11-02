@@ -3,7 +3,7 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext } from "react";
 import styles from "./featured.module.css";
-import { Items } from "./data";
+import { Items } from "../../data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -22,7 +22,7 @@ const Featured = () => {
   const data = getData();
 
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.content}>
         <h2 className={styles.h2}>PRODUITS EN VEDETTE</h2>
         <p className={styles.desc}>
@@ -33,7 +33,7 @@ const Featured = () => {
       <div className={styles.containerProducts}>
         <div className={styles.grid}>
           {data.map((item) => (
-            <Link href={`/produit/${item.id}`}>
+            <Link href={`/produit/${item.id}`} key={item.id}>
               <div
                 className={styles.card}
                 style={
