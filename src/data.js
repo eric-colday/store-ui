@@ -105,6 +105,7 @@ export const CategoriesPosts = [
         createdAt: "2021-05-01T00:00:00.000Z",
       },
     ],
+
   },
 ];
 
@@ -112,12 +113,12 @@ export const Posts = [
   {
     id: 1,
     image: "/home/2.jpg",
-    title: "Jean Levis Comment choisir ?",
+    title: "Jean Levis Comment choisir ?", 
     description:
       "Le jean est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
     slug: "jean-levis-comment-choisir",
-    catSlug: "jeans",
-    cat: "jeans",
+    catSlug: "jeans", 
+    cat: "jeans", 
     createdAt: "2021-05-01T00:00:00.000Z",
   },
   {

@@ -1,17 +1,14 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
   margin: 1rem;
   text-align: center;
 }
 
 .card {
-  /* border: 1px solid #ccc; */
   border-radius: 5px;
   padding: 1rem;
-  /* background-color: #fff; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .card.jeans {
@@ -28,6 +25,10 @@
 
 .card.chaussures {
   background-color: #ff795736;
+}
+
+.card.tous {
+  background-color: #ffb04f45;
 }
 
 @media screen and (max-width: 768px) {

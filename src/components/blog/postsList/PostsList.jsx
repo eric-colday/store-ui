@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./postsList.module.css";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Posts } from "@/data.js";
 import Pagination from "@/components/pagination/Pagination";
 
-const getData = () => {
-  const data = Posts;
+const getData = (page, cat) => {
+  const data = cat ? Posts.filter((item) => item.catSlug === cat) : Posts;
+  
 
   if (data) {
     return data;
@@ -18,11 +18,20 @@ const getData = () => {
 
 const PostsList = ({ page, cat }) => {
   const data = getData(page, cat);
+  const count = data.length;
+  // let postsPerPage = 6;
+  // let start = (page - 1) * postsPerPage;
+  // let end = page * postsPerPage;
+  // let totalPages = Math.ceil(count / postsPerPage);
+  // let pages = [];
+  // for (let i = 1; i <= totalPages; i++) {
+  //   pages.push(i);
+  // }
 
-  // const POST_PER_PAGE = 2;
+  const POST_PER_PAGE = 6;
 
-  // const hasPrev = POST_PER_PAGE * (page - 1) > 0;
-  // const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
+  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
   return (
     <div className={styles.container}>
@@ -53,7 +62,7 @@ const PostsList = ({ page, cat }) => {
           </Link>
         ))}
       </div>
-      {/* <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} /> */}
+      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
     </div>
   );
 };

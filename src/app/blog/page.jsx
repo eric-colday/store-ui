@@ -17,7 +17,7 @@ const Blog = ({ searchParams }) => {
           votre vie.
         </p>
       </div>
-      <CategoryList cat={cat}/>
+      <CategoryList cat={cat}/> 
       <PostsList page={page} cat={cat} />
     </div>
   );
