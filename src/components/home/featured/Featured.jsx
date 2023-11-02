@@ -3,7 +3,7 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext } from "react";
 import styles from "./featured.module.css";
-import { Items } from "../../data";
+import { Items } from "@/data.js";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 

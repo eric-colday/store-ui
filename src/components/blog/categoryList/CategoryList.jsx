@@ -1,0 +1,35 @@
+import React from "react";
+import styles from "./categoryList.module.css";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { CategoriesPosts } from "@/data";
+
+const getData = () => {
+  const data = CategoriesPosts;
+
+  if (data) {
+    return data;
+  }
+
+  return notFound();
+};
+
+const CategoryList = () => {
+  const data = getData();
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.grid}>
+        {data.map((item) => (
+          <Link key={item.id} href={`/blog?cat=${item.cat}`}>
+            <div className={`${styles.card} ${styles[item.slug]}`}>
+              <span>{item.title} </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CategoryList;

@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "NecStore - Boutique e-commerce en France",
-  description: "NecStore vous propose Une collection tendance de t-shirts, jeans et vestes pour un style unique. Exprimez-vous avec notre mode de qualité ! ",
+  description:
+    "NecStore vous propose Une collection tendance de t-shirts, jeans et vestes pour un style unique. Exprimez-vous avec notre mode de qualité ! ",
 };
 
 export default function RootLayout({ children }) {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
           <ThemeProvider>
             <main>
               <Navbar />
-              {children}
+              <div className="container">{children}</div>
               <Newsletter />
               <Footer />
             </main>

@@ -65,7 +65,7 @@
   font-weight: 500;
   padding: 1rem 2rem;
   border-radius: 5px;
-  background-color: #104d87;
+  background-color: #0d2847;
   color: white;
   border: none;
   cursor: pointer;
@@ -73,8 +73,6 @@
 }
 
 .btn:hover {
-  background-color: #0090ff;
-  color: white;
   transform: scale(1.1);
 }
 

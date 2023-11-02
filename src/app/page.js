@@ -1,8 +1,7 @@
-import Banner from "@/components/banner/Banner";
-import Featured from "@/components/featured/Featured";
-import RecentsPosts from "@/components/recentsPosts/RecentsPosts";
-import Slider from "@/components/slider/Slider";
-import Image from "next/image";
+import Banner from "@/components/home/banner/Banner";
+import Featured from "@/components/home/featured/Featured";
+import RecentsPosts from "@/components/home/recentsPosts/RecentsPosts";
+import Slider from "@/components/home/slider/Slider";
 import styles from "./page.module.css";
 
 export default function Home() {

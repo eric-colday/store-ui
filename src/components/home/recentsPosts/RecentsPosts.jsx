@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import styles from "./recentsPosts.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Posts } from "../../data";
+import { Posts } from "@/data";
 import { ThemeContext } from "@/context/ThemeContext";
 
 const getData = () => {
@@ -14,14 +14,14 @@ const getData = () => {
     return data;
   }
 
-  return notFound();
+  return notFound(); 
 };
 
 const RecentsPosts = () => {
   const { theme } = useContext(ThemeContext);
   const data = getData();
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.content}>
         <h2 className={styles.h2}>NOTRE BLOG</h2>
         <p className={styles.desc}>
@@ -33,7 +33,7 @@ const RecentsPosts = () => {
       <div className={styles.containerPosts}>
         <div className={styles.grid}>
           {data.map((item) => (
-            <Link href={`/blog/${item.id}`} key={item.id}>
+            <Link href={`/posts/${item.slug}`} key={item.id}>
               <div
                 className={styles.card}
                 style={
@@ -65,6 +65,14 @@ const RecentsPosts = () => {
           ))}
         </div>
       </div>
+      <button
+        className={styles.buttonBlog}
+        onClick={() => {
+          window.location.href = "/blog";
+        }}
+      >
+        Voir plus
+      </button>
     </div>
   );
 };

@@ -1,14 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .content {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; 
   margin-top: 6rem;
   gap: 20px;
 }
 
 .h2 {
   font-size: 45px;
-  font-weight: 700;
+  font-weight: 700;  
 }
 
 .desc {
@@ -24,7 +32,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); 
   margin-top: 2rem;
   width: 95%;
   gap: 20px;
@@ -84,6 +92,22 @@
   background-color: #000;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.buttonBlog {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  background-color: #0d2847;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonBlog:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1024px) {

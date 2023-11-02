@@ -2,6 +2,7 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import styles from "./newsletter.module.css";
+import Link from "next/link";
 
 const Newsletter = () => {
   return (
@@ -17,8 +18,12 @@ const Newsletter = () => {
           <button className={styles.button}>REJOINS-NOUS</button>
         </div>
         <div className="styles.icons">
-          <FacebookIcon />
-          <InstagramIcon />
+          <Link href="#">
+            <FacebookIcon />
+          </Link>
+          <Link href="#">
+            <InstagramIcon />
+          </Link>
         </div>
       </div>
     </div>

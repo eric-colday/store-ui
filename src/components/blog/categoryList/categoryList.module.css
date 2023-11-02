@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.card {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 1rem;
+  /* background-color: #fff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.card.jeans {
+  background-color: #57c4ff31;
+}
+
+.card.t-shirts {
+  background-color: #da85c731;
+}
+
+.card.vestes{
+  background-color: #7fb88133;
+}
+
+.card.chaussures {
+  background-color: #ff795736;
+}
+
+@media screen and (max-width: 768px) {
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
