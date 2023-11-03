@@ -18,7 +18,7 @@ const CategoryList = () => {
   const data = getData();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
       <div className={styles.grid}>
         {data.map((item) => (
           <Link key={item.id} href={`/blog?cat=${item.slug}`}>

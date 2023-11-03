@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Posts } from "@/data";
 import SinglePost from "@/components/blog/single/SinglePost";
 
+
 const getData = (slug) => {
   const data = Posts.find((item) => item.slug === slug);
 
@@ -20,8 +21,9 @@ const SinplePost = ({ params }) => {
   const data = getData(slug);
 
   return (
-    <div className={styles.container}>
+    <div>
       <SinglePost data={data} />
+      
     </div>
   );
 };
