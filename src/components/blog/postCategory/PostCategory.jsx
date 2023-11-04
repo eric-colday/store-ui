@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./categoryList.module.css";
+import styles from "./postCategory.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CategoriesPosts } from "@/data";
@@ -14,12 +14,12 @@ const getData = () => {
   return notFound();
 };
 
-const CategoryList = () => {
+const PostCategory = () => {
   const data = getData();
 
   return (
     <div className={styles.container}> 
-      <div className={styles.grid}>
+      <div className={styles.grid}> 
         {data.map((item) => (
           <Link key={item.id} href={`/blog?cat=${item.slug}`}>
             <div className={`${styles.card} ${styles[item.slug]}`}>
@@ -32,4 +32,4 @@ const CategoryList = () => {
   );
 };
 
-export default CategoryList;
+export default PostCategory;

@@ -1,31 +1,157 @@
-export const Items = [
+export const Products = [
   {
     id: 1,
     name: "T-SHIRT",
     description: "T-shirt en coton",
-    price: "10 €",
+    price: "10",
     image: "/home/t-shirt-en-coton.webp",
+    slug: "jean-levis-comment-choisir",
+    catSlug: "t-shirts",
+    cat: "t-shirts",
+    size: ["S", "M", "L"],
+    color: ["black", "white"],
+    inStock: true,
+    active: true,
+    createdAt: "2021-05-01T00:00:00.000Z",
   },
   {
     id: 2,
     name: "JEAN",
     description: "Jean skinny",
-    price: "19.99 €",
+    price: "19.99",
     image: "/home/jean-flarebootcut.webp",
+    slug: "jean-skinny",
+    catSlug: "jeans",
+    cat: "jeans",
+    size: ["S", "M", "L"],
+    color: ["black", "white", "blue"],
+    inStock: true,
+    active: true,
+    createdAt: "2021-05-01T00:00:00.000Z",
   },
   {
     id: 3,
     name: "VESTE",
     description: "Veste en jean",
-    price: "$19.99",
+    price: "19.99",
     image: "/home/veste-matelassee.webp",
+    slug: "veste-en-jean",
+    catSlug: "vestes",
+    cat: "vestes",
+    size: ["S", "M", "L"],
+    color: ["black", "white", "blue"],
+    inStock: true,
+    active: true,
+    createdAt: "2021-05-01T00:00:00.000Z",
   },
   {
     id: 4,
     name: "TENNIS",
     description: "Tennis en toile",
-    price: "$19.99",
+    price: "19.99",
     image: "/home/tennis-lacets.webp",
+    slug: "tennis-en-toile",
+    catSlug: "chaussures",
+    cat: "chaussures",
+    size: ["S", "M", "L"],
+    color: ["black", "white", "blue"],
+    inStock: true,
+    active: true,
+    createdAt: "2021-05-01T00:00:00.000Z",
+  },
+];
+
+export const CategoriesProducts = [
+  {
+    id: 1,
+    slug: "t-shirts",
+    title: "T-shirts",
+    img: "",
+    Products: [
+      {
+        id: 1,
+        name: "T-SHIRT",
+        description: "T-shirt en coton",
+        price: "10",
+        image: "/home/t-shirt-en-coton.webp",
+        slug: "t-shirt-en-coton",
+        catSlug: "t-shirts",
+        cat: "t-shirts",
+        size: ["S", "M", "L"],
+        color: ["black", "white"],
+        inStock: true,
+        active: true,
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "jeans",
+    title: "Jeans",
+    img: "",
+    Products: [
+      {
+        id: 2,
+        name: "JEAN",
+        description: "Jean skinny",
+        price: "19.99",
+        image: "/home/jean-flarebootcut.webp",
+        slug: "jean-skinny",
+        catSlug: "jeans",
+        cat: "jeans",
+        size: ["S", "M", "L"],
+        color: ["black", "white", "blue"],
+        inStock: true,
+        active: true,
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 3,
+    slug: "vestes",
+    title: "Vestes",
+    img: "",
+    Products: [
+      {
+        id: 3,
+        name: "VESTE",
+        description: "Veste en jean",
+        price: "19.99",
+        image: "/home/veste-matelassee.webp",
+        slug: "veste-en-jean",
+        catSlug: "vestes",
+        cat: "vestes",
+        size: ["S", "M", "L"],
+        color: ["black", "white", "blue"],
+        inStock: true,
+        active: true,
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: "chaussures",
+    title: "Chaussures",
+    img: "",
+    Products: [
+      {
+        id: 4,
+        name: "TENNIS",
+        description: "Tennis en toile",
+        price: "19.99",
+        image: "/home/tennis-lacets.webp",
+        catSlug: "chaussures",
+        cat: "chaussures",
+        size: ["S", "M", "L"],
+        color: ["black", "white", "blue"],
+        inStock: true,
+        active: true,
+        createdAt: "2021-05-01T00:00:00.000Z",
+      },
+    ],
   },
 ];
 
@@ -105,7 +231,6 @@ export const CategoriesPosts = [
         createdAt: "2021-05-01T00:00:00.000Z",
       },
     ],
-
   },
 ];
 
@@ -113,12 +238,12 @@ export const Posts = [
   {
     id: 1,
     image: "/home/2.jpg",
-    title: "Jean Levis Comment choisir ?", 
+    title: "Jean Levis Comment choisir ?",
     description:
       "Le jean est un incontournable de la garde-robe masculine. Il est donc important de bien le choisir.",
     slug: "jean-levis-comment-choisir",
-    catSlug: "jeans", 
-    cat: "jeans", 
+    catSlug: "jeans",
+    cat: "jeans",
     createdAt: "2021-05-01T00:00:00.000Z",
   },
   {
@@ -155,6 +280,18 @@ export const Posts = [
     createdAt: "2021-05-01T00:00:00.000Z",
   },
 ];
+
+export const Comments = [
+  {
+    id: 1,
+    user: "Tobby",
+    userEmail: "tobby@gmail.com",
+    commentaire : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptatibus!",
+    postSlug: "",
+    post: "",
+    createdAt: "2021-05-01T00:00:00.000Z",
+  },
+]
 
 export const Slides = [
   {

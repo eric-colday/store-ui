@@ -9,7 +9,7 @@
 .content {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   margin-top: 6rem;
   gap: 20px;
 }
@@ -22,6 +22,12 @@
 .desc {
   text-align: center;
   padding: 0 20rem 0 20rem;
+}
+
+.categorieContainer {
+  display: flex;
+  gap: 20px;
+  margin: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -41,6 +47,10 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categorieContainer {
+    flex-direction: column;
   }
 }
 

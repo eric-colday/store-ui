@@ -3,12 +3,12 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext } from "react";
 import styles from "./featured.module.css";
-import { Items } from "@/data.js";
+import { Products } from "@/data.js";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const getData = () => {
-  const data = Items;
+  const data = Products;
 
   if (data) {
     return data;

@@ -1,0 +1,17 @@
+.categorieItems{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categorieSelect{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categorieFilter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
