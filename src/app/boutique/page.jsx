@@ -2,7 +2,7 @@
 
 import ProductCategory from "@/components/boutique/productCategory/ProductCategory";
 import ProductList from "@/components/boutique/productList/ProductList";
-import SelectOption from "@/components/boutique/select/SelectOption";
+import SelectOption from "@/components/boutique/selectOption/SelectOption";
 import React, { useState } from "react";
 import styles from "./boutique.module.css";
 
@@ -36,7 +36,6 @@ const Boutique = ({ searchParams }) => {
       </div>
       <ProductCategory page={page} cat={cat} />
       <div className={styles.categorieContainer}>
-        {/* Select */}
         <SelectOption
           page={page}
           cat={cat}

@@ -3,7 +3,7 @@ import styles from "./sinplePost.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Posts } from "@/data";
-import SinglePost from "@/components/blog/single/SinglePost";
+import SinglePost from "@/components/blog/singlePost/SinglePost";
 
 
 const getData = (slug) => {
@@ -22,8 +22,7 @@ const SinplePost = ({ params }) => {
 
   return (
     <div>
-      <SinglePost data={data} />
-      
+      <SinglePost data={data} /> 
     </div>
   );
 };

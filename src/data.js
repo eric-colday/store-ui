@@ -4,7 +4,11 @@ export const Products = [
     name: "T-SHIRT",
     description: "T-shirt en coton",
     price: "10",
-    image: "/home/t-shirt-en-coton.webp",
+    image: [
+      "/home/t-shirt-en-coton.webp",
+      "/home/jean-flarebootcut.webp",
+      "/home/veste-matelassee.webp",
+    ],
     slug: "jean-levis-comment-choisir",
     catSlug: "t-shirts",
     cat: "t-shirts",
@@ -19,12 +23,16 @@ export const Products = [
     name: "JEAN",
     description: "Jean skinny",
     price: "19.99",
-    image: "/home/jean-flarebootcut.webp",
+    image: [
+      "/home/jean-flarebootcut.webp",
+      "/home/veste-matelassee.webp",
+      "/home/tennis-lacets.webp",
+    ],
     slug: "jean-skinny",
     catSlug: "jeans",
     cat: "jeans",
     size: ["S", "M", "L"],
-    color: ["black", "white", "blue"],
+    color: ["black", "white", "#3E63DD"],
     inStock: true,
     active: true,
     createdAt: "2021-05-01T00:00:00.000Z",
@@ -34,7 +42,11 @@ export const Products = [
     name: "VESTE",
     description: "Veste en jean",
     price: "19.99",
-    image: "/home/veste-matelassee.webp",
+    image: [
+      "/home/veste-matelassee.webp",
+      "/home/tennis-lacets.webp",
+      "/home/t-shirt-en-coton.webp",
+    ],
     slug: "veste-en-jean",
     catSlug: "vestes",
     cat: "vestes",
@@ -49,7 +61,11 @@ export const Products = [
     name: "TENNIS",
     description: "Tennis en toile",
     price: "19.99",
-    image: "/home/tennis-lacets.webp",
+    image: [
+      "/home/tennis-lacets.webp",
+      "/home/t-shirt-en-coton.webp",
+      "/home/jean-flarebootcut.webp",
+    ],
     slug: "tennis-en-toile",
     catSlug: "chaussures",
     cat: "chaussures",
@@ -286,12 +302,13 @@ export const Comments = [
     id: 1,
     user: "Tobby",
     userEmail: "tobby@gmail.com",
-    commentaire : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptatibus!",
+    commentaire:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptatibus!",
     postSlug: "",
     post: "",
     createdAt: "2021-05-01T00:00:00.000Z",
   },
-]
+];
 
 export const Slides = [
   {

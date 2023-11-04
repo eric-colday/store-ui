@@ -43,7 +43,7 @@ const Featured = () => {
                 }
               >
                 <img
-                  src={item.image}
+                  src={item.image[0]}
                   alt="featured1"
                   className={styles.cardImage}
                 />
