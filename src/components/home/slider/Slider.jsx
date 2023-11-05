@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./slider.module.css";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
+import Link from "next/link";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -44,12 +45,12 @@ const Slider = () => {
           className={styles.icon}
           onClick={prevSlide}
           style={{
-            border: "2px solid #468bff",
+            border: "2px solid #0d2847",
           }}
         >
           <WestOutlinedIcon
             style={{
-              color: "#468bff",
+              color: "#0d2847",
             }}
           />
         </div>
@@ -57,12 +58,12 @@ const Slider = () => {
           className={styles.icon}
           onClick={nextSlide}
           style={{
-            border: "2px solid #468bff",
+            border: "2px solid #0d2847",
           }}
         >
           <EastOutlinedIcon
             style={{
-              color: "#468bff",
+              color: "#0d2847",
             }}
           />
         </div>
@@ -70,13 +71,14 @@ const Slider = () => {
       <div className={styles.bannerContent}>
         <h2 className={styles.h2}>NecStore</h2>
         <p className={styles.p}>
-        Une collection tendance de t-shirts, 
-        jeans et vestes pour un style unique. 
-        Exprimez-vous avec notre mode de qualité !
+          Une collection tendance de t-shirts, jeans et vestes pour un style
+          unique. Exprimez-vous avec notre mode de qualité !
         </p>
-        <button className={`${styles.btn} ${styles.btnPrimary}`}>
-          Découvrir
-        </button>
+        <Link href="/boutique">
+          <button className={`${styles.btn} ${styles.btnPrimary}`}>
+            Découvrir
+          </button>
+        </Link>
       </div>
     </div>
   );

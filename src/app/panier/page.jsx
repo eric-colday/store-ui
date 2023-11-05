@@ -10,10 +10,13 @@ import {
   removeItem,
   resetCart,
 } from "@/redux/cartReducer.js";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const Panier = () => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const totalPrice = () => {
     let total = 0;
@@ -23,7 +26,15 @@ const Panier = () => {
     return total.toFixed(2);
   };
 
-  console.log(products);
+  const handleClick = () => {
+    const data = {
+      products: products,
+      total: totalPrice(),
+    };
+    dispatch(resetCart());
+    toast.success("Commande passée avec succès !");
+    router.push("/commandes");
+  };
 
   return (
     <div>
@@ -40,9 +51,9 @@ const Panier = () => {
                 />
               </div>
               <div className={styles.cartInfo2}>
-                <p>{item.title}</p>
-                <p>{item.size}</p>
-                <p>{item.color}</p>
+                <p>Produit : {item.title}</p>
+                <p> Taille : {item.size}</p>
+                <p> Couleur: {item.color}</p>
                 <p>
                   {item.quantity} x {item.price} €
                 </p>
@@ -81,7 +92,10 @@ const Panier = () => {
                     </div>
                   </div>
                   <button
-                    onClick={() => dispatch(removeItem(item.id))}
+                    onClick={() => {
+                      dispatch(removeItem(item.id));
+                      toast.success("Commande annulée !");
+                    }}
                     className={styles.cartButton}
                   >
                     Supprimer
@@ -94,17 +108,22 @@ const Panier = () => {
         {products.length === 0 ? null : (
           <div className={styles.cartPay}>
             <div className={styles.cartTotal}>
-              <span >Sous-total: </span>
+              <span>Total: </span>
               <span>{totalPrice()} €</span>
             </div>
             <div className={styles.buttonFinals}>
               <div>
-                <button className={styles.cartButton}>Acheter</button>
+                <button className={styles.cartButton} onClick={handleClick}>
+                  Acheter
+                </button>
               </div>
               <div>
                 <button
                   className={styles.cartButton}
-                  onClick={() => dispatch(resetCart())}
+                  onClick={() => {
+                    dispatch(resetCart());
+                    toast.success("Commande annulée !");
+                  }}
                 >
                   Vider le panier
                 </button>
