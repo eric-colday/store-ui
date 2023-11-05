@@ -24,7 +24,6 @@ const Boutique = ({ searchParams }) => {
     <div className={styles.container}>
       <div className={styles.content}>
         <h2 className={styles.h2}>
-          {" "}
           BOUTIQUE
           {cat ? ` - ${decodeURIComponent(cat)}` : ""}
         </h2>

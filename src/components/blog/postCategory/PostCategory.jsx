@@ -21,7 +21,7 @@ const PostCategory = () => {
     <div className={styles.container}> 
       <div className={styles.grid}> 
         {data.map((item) => (
-          <Link key={item.id} href={`/blog?cat=${item.slug}`}>
+          <Link key={item.id} href={`/blog?cat=${item.slug}`}> 
             <div className={`${styles.card} ${styles[item.slug]}`}>
               <span>{item.title} </span>
             </div>
