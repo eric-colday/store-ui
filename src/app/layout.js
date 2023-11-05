@@ -5,6 +5,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Newsletter from "@/components/newsletter/Newsletter";
+import Providers from "../redux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeContextProvider>
           <ThemeProvider>
-            <main>
-              <Navbar />
-              <div className="container">{children}</div>
-              <Newsletter />
-              <Footer />
-            </main>
+            <Providers>
+              <main>
+                <Navbar />
+                <div className="container">{children}</div>
+                <Newsletter />
+                <Footer />
+              </main>
+            </Providers>
           </ThemeProvider>
         </ThemeContextProvider>
       </body>

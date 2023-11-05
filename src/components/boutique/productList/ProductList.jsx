@@ -58,9 +58,8 @@ const ProductList = ({ page, cat, filters, sort }) => {
           <Link href={`/produit/${item.slug}`} key={item.id}>
             <div className={styles.card}>
               <img src={item.image[0]} alt="blog1" className={styles.cardImage} />
-
               <div className={styles.cardContent}>
-                <h3 className={styles.h3}>{item.name}</h3>
+                <h3 className={styles.h3}>{item.title}</h3>
                 <div>{item.price} € </div>
               </div>
             </div> 

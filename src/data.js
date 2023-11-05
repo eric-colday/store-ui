@@ -1,7 +1,7 @@
 export const Products = [
   {
     id: 1,
-    name: "T-SHIRT",
+    title: "T-SHIRT",
     description: "T-shirt en coton",
     price: "10",
     image: [
@@ -20,7 +20,7 @@ export const Products = [
   },
   {
     id: 2,
-    name: "JEAN",
+    title: "JEAN",
     description: "Jean skinny",
     price: "19.99",
     image: [
@@ -39,7 +39,7 @@ export const Products = [
   },
   {
     id: 3,
-    name: "VESTE",
+    title: "VESTE",
     description: "Veste en jean",
     price: "19.99",
     image: [
@@ -58,7 +58,7 @@ export const Products = [
   },
   {
     id: 4,
-    name: "TENNIS",
+    title: "TENNIS",
     description: "Tennis en toile",
     price: "19.99",
     image: [
@@ -86,7 +86,7 @@ export const CategoriesProducts = [
     Products: [
       {
         id: 1,
-        name: "T-SHIRT",
+        title: "T-SHIRT",
         description: "T-shirt en coton",
         price: "10",
         image: [
@@ -113,7 +113,7 @@ export const CategoriesProducts = [
     Products: [
       {
         id: 1,
-        name: "JEAN",
+        title: "JEAN",
         description: "Jean skinny",
         price: "19.99",
         image: [
@@ -140,7 +140,7 @@ export const CategoriesProducts = [
     Products: [
       {
         id: 1,
-        name: "VESTE",
+        title: "VESTE",
         description: "Veste en jean",
         price: "19.99",
         image: [
@@ -167,7 +167,7 @@ export const CategoriesProducts = [
     Products: [
       {
         id: 1,
-        name: "TENNIS",
+        title: "TENNIS",
         description: "Tennis en toile",
         price: "19.99",
         image: [

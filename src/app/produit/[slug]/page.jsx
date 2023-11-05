@@ -3,8 +3,10 @@
 import Button from "@/components/Button/Button";
 import { ThemeContext } from "@/context/ThemeContext";
 import { Products } from "@/data";
+import { addToCart } from "@/redux/cartReducer";
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React, { useContext, useState } from "react";
+import { useDispatch } from "react-redux";
 import styles from "./produit.module.css";
 
 const getData = (slug) => {
@@ -25,6 +27,9 @@ const Produit = ({ params }) => {
   const [image, setImage] = useState(data.image[0]);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const [quantity, setQuantity] = useState(1);
+
+  const dispatch = useDispatch();
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -68,7 +73,8 @@ const Produit = ({ params }) => {
                 style={{
                   backgroundColor: c,
                   cursor: "pointer",
-                  border: color === c ? "5px solid #C2E5FF" : "1px solid #C2E5FF",
+                  border:
+                    color === c ? "5px solid #C2E5FF" : "1px solid #C2E5FF",
                 }}
                 key={c}
                 onClick={() => setColor(c)}
@@ -155,7 +161,23 @@ const Produit = ({ params }) => {
           </div>
         </div>
         <div className={styles.ButtonFlex}>
-          <button className={styles.itemButton} disabled={!color || !size}>
+          <button
+            className={styles.itemButton}
+            onClick={() =>
+              dispatch(
+                addToCart({
+                  id: data.id,
+                  title: data.title,
+                  price: data.price,
+                  image: data.image[0],
+                  color,
+                  size,
+                  quantity,
+                })
+              )
+            }
+            disabled={!color || !size}
+          >
             {data.inStock > 0 ? "Ajouter au panier" : "Rupture de stock"}
           </button>
         </div>

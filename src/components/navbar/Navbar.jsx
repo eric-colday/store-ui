@@ -10,6 +10,7 @@ import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import { Badge } from "@mui/material";
 import { ThemeContext } from "@/context/ThemeContext";
+import { useSelector } from "react-redux";
 
 const links = [
   {
@@ -24,11 +25,6 @@ const links = [
   },
   {
     id: 3,
-    title: "Produits",
-    url: "/produits",
-  },
-  {
-    id: 4,
     title: "Blog",
     url: "/blog",
   },
@@ -37,6 +33,7 @@ const links = [
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
   const [showLinks, setShowLinks] = useState(false);
+  const products = useSelector((state) => state.cart.products);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
@@ -104,8 +101,13 @@ const Navbar = () => {
         <Link href="/connexion">
           <PersonIcon />
         </Link>
-        <Link href="/cart">
-          <Badge badgeContent="2" color="primary">
+        <Link href="/panier">
+          <Badge
+            badgeContent={products.reduce((acc, product) => {
+              return acc + product.quantity;
+            }, 0)}
+            color="primary"
+          >
             <ShoppingCartIcon />
           </Badge>
         </Link>
