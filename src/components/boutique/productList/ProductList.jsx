@@ -63,7 +63,7 @@ const ProductList = ({ page, cat, filters, sort }) => {
                 <h3 className={styles.h3}>{item.name}</h3>
                 <div>{item.price} € </div>
               </div>
-            </div>
+            </div> 
           </Link>
         ))}
         {/* {cat

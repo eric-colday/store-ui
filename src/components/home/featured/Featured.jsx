@@ -33,7 +33,7 @@ const Featured = () => {
       <div className={styles.containerProducts}>
         <div className={styles.grid}>
           {data.map((item) => (
-            <Link href={`/produit/${item.id}`} key={item.id}>
+            <Link href={`/produit/${item.slug}`} key={item.id}>
               <div
                 className={styles.card}
                 style={

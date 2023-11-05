@@ -68,18 +68,18 @@ const Produit = ({ params }) => {
                 style={{
                   backgroundColor: c,
                   cursor: "pointer",
-                  border: color === c ? "2px solid black" : "1px solid black",
+                  border: color === c ? "5px solid #C2E5FF" : "1px solid #C2E5FF",
                 }}
                 key={c}
                 onClick={() => setColor(c)}
               >
-                {color === c && (
+                {/* {color === c && (
                   <img
                     src="https://img.icons8.com/ios/50/000000/checkmark.png"
                     alt=""
-                    className={styles.itemCheckmark}
+                    className={styles.itemCheckmark} 
                   />
-                )}
+                )} */}
               </div>
             ))}
           </div>
@@ -145,7 +145,9 @@ const Produit = ({ params }) => {
                   }
                 >
                   {data.size?.map((s) => (
-                    <MenuItem value={s}>{s}</MenuItem>
+                    <MenuItem value={s} key={s}>
+                      {s}
+                    </MenuItem>
                   ))}
                 </Select>
               </FormControl>
