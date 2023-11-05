@@ -9,16 +9,6 @@ import styles from "./boutique.module.css";
 const Boutique = ({ searchParams }) => {
   const page = parseInt(searchParams.page) || 1;
   const { cat } = searchParams;
-  // const [filters, setFilters] = useState({});
-  const [sort, setSort] = useState("newest");
-
-  // const handleFilters = (e) => {
-  //   const value = e.target.value;
-  //   setFilters({
-  //     ...filters,
-  //     [e.target.name]: value,
-  //   });
-  // };
 
   return (
     <div className={styles.container}>
@@ -33,15 +23,13 @@ const Boutique = ({ searchParams }) => {
           conseils pour une vie épanouie.
         </p>
       </div>
-      <ProductCategory page={page} cat={cat} />
+      <ProductCategory cat={cat} />
       <div className={styles.categorieContainer}>
         <SelectOption
           page={page}
           cat={cat}
-          sort={sort}
-          setSort={setSort}
         />
-        <ProductList page={page} cat={cat} sort={sort} />
+        <ProductList page={page} cat={cat} />
       </div>
     </div>
   );

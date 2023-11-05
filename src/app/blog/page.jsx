@@ -8,7 +8,7 @@ const Blog = ({ searchParams }) => {
   const { cat } = searchParams;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
       <div className={styles.content}>
         <h2 className={styles.h2}>
           BLOG
@@ -20,7 +20,7 @@ const Blog = ({ searchParams }) => {
           votre vie.
         </p>
       </div>
-      <PostCategory cat={cat} />
+      <PostCategory cat={cat} /> 
       <PostsList page={page} cat={cat} />
     </div>
   );

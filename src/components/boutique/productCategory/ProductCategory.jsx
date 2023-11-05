@@ -19,10 +19,10 @@ const ProductCategory = () => {
   const data = getData();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
       <div className={styles.grid}>
         {data.map((item) => (
-          <Link key={item.id} href={`/boutique?cat=${item.slug}`}>
+          <Link key={item.id} href={`/boutique?cat=${item.slug}`}> 
             <div className={`${styles.card} ${styles[item.slug]}`}>
               <span>{item.title}</span>
             </div>

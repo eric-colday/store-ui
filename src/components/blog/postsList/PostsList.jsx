@@ -19,14 +19,6 @@ const getData = (page, cat) => {
 const PostsList = ({ page, cat }) => {
   const data = getData(page, cat);
   const count = data.length;
-  // let postsPerPage = 6;
-  // let start = (page - 1) * postsPerPage;
-  // let end = page * postsPerPage;
-  // let totalPages = Math.ceil(count / postsPerPage);
-  // let pages = [];
-  // for (let i = 1; i <= totalPages; i++) {
-  //   pages.push(i);
-  // }
 
   const POST_PER_PAGE = 6;
 

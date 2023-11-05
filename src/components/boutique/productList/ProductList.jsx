@@ -3,7 +3,7 @@
 import Pagination from "@/components/pagination/Pagination";
 import { Products } from "@/data";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import styles from "./productList.module.css";
 
 const getData = (page, cat) => {
@@ -13,12 +13,12 @@ const getData = (page, cat) => {
     return data;
   }
 
-  return notFound();
+  return notFound(); 
 };
 
-const ProductList = ({ page, cat, filters, sort }) => {
+const ProductList = ({ page, cat }) => {
   const data = getData(page, cat);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  // const [filteredProducts, setFilteredProducts] = useState([]);
   const count = data.length;
 
   const POST_PER_PAGE = 6;
