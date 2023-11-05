@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./banner.module.css";
 
@@ -37,7 +38,9 @@ const Banner = () => {
           <div className={styles.cardTimer}>
             {d}:{h}:{m}:{s}
           </div>
-          <button className={styles.bannerButton}>Acheter maintenant</button>
+          <Link href="/boutique">
+            <button className={styles.bannerButton}>Acheter maintenant</button>
+          </Link>
         </div>
       </div>
     </div>
