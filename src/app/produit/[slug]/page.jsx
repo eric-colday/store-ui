@@ -79,13 +79,6 @@ const Produit = ({ params }) => {
                 key={c}
                 onClick={() => setColor(c)}
               >
-                {/* {color === c && (
-                  <img
-                    src="https://img.icons8.com/ios/50/000000/checkmark.png"
-                    alt=""
-                    className={styles.itemCheckmark} 
-                  />
-                )} */}
               </div>
             ))}
           </div>

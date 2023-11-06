@@ -22,7 +22,7 @@ const SinplePost = ({ params }) => {
 
   return (
     <div>
-      <SinglePost data={data} /> 
+      <SinglePost data={data} />  
     </div>
   );
 };

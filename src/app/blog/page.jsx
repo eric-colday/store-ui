@@ -12,7 +12,7 @@ const Blog = ({ searchParams }) => {
       <div className={styles.content}>
         <h2 className={styles.h2}>
           BLOG
-          {cat ? ` - ${decodeURIComponent(cat)}` : ""}
+          {cat ? ` - ${decodeURIComponent(cat)}` : ""} 
         </h2>
         <p className={styles.desc}>
           Explorez notre blog captivant, où l'expertise rencontre la passion.
