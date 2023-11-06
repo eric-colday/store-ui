@@ -25,7 +25,7 @@ const ProductCategory = () => {
           <Link key={item.id} href={`/boutique?cat=${item.slug}`}> 
             <div className={`${styles.card} ${styles[item.slug]}`}>
               <span>{item.title}</span>
-            </div>
+            </div> 
           </Link>
         ))}
       </div>

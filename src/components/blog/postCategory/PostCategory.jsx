@@ -23,7 +23,7 @@ const PostCategory = () => {
         {data.map((item) => (
           <Link key={item.id} href={`/blog?cat=${item.slug}`}> 
             <div className={`${styles.card} ${styles[item.slug]}`}>
-              <span>{item.title}</span>
+              <span>{item.title}</span> 
             </div>
           </Link>
         ))}

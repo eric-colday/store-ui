@@ -1,9 +1,7 @@
-"use client";
-
 import ProductCategory from "@/components/boutique/productCategory/ProductCategory";
 import ProductList from "@/components/boutique/productList/ProductList";
 import SelectOption from "@/components/boutique/selectOption/SelectOption";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./boutique.module.css";
 
 const Boutique = ({ searchParams }) => {
@@ -13,7 +11,7 @@ const Boutique = ({ searchParams }) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h2 className={styles.h2}>
+        <h2 className={styles.h2}> 
           BOUTIQUE
           {cat ? ` - ${decodeURIComponent(cat)}` : ""}
         </h2>
@@ -24,13 +22,14 @@ const Boutique = ({ searchParams }) => {
         </p>
       </div>
       <ProductCategory cat={cat} />
-      <div className={styles.categorieContainer}>
+      {/* <ProductList page={page} cat={cat} /> */}
+      {/* <div className={styles.categorieContainer}>
         <SelectOption
           page={page}
           cat={cat}
         />
         <ProductList page={page} cat={cat} />
-      </div>
+      </div> */}
     </div>
   );
 };
