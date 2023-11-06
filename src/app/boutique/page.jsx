@@ -22,7 +22,7 @@ const Boutique = ({ searchParams }) => {
         </p>
       </div>
       <ProductCategory cat={cat} />
-      {/* <ProductList page={page} cat={cat} /> */}
+      <ProductList page={page} cat={cat} />
       {/* <div className={styles.categorieContainer}>
         <SelectOption
           page={page}
