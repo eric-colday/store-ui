@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./featuredCategory.module.css";
 
-const FeaturedCategory = () => {
+const featuredCategory = () => {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.container}>
@@ -57,4 +57,4 @@ const FeaturedCategory = () => {
   );
 };
 
-export default FeaturedCategory;
+export default featuredCategory;

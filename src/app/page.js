@@ -1,7 +1,7 @@
 import Banner from "@/components/home/banner/Banner";
 import Featured from "@/components/home/featured/Featured";
-import FeaturedCategory from "@/components/home/featuredCategory/FeaturedCategory";
 import RecentsPosts from "@/components/home/recentsPosts/RecentsPosts";
+import FeaturedCategory from "@/components/home/featuredCategory/FeaturedCategory";
 import Slider from "@/components/home/slider/Slider";
 import styles from "./page.module.css";
 
