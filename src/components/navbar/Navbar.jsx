@@ -11,6 +11,19 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Badge } from "@mui/material";
 import { ThemeContext } from "@/context/ThemeContext";
 import { useSelector } from "react-redux";
+import { Products } from "@/data";
+
+import { notFound } from "next/navigation";
+
+const getData = () => {
+  const data = Products;
+
+  if (data) {
+    return data;
+  }
+
+  return notFound();
+};
 
 const links = [
   {
@@ -34,9 +47,17 @@ const Navbar = () => {
   const { theme } = useContext(ThemeContext);
   const [showLinks, setShowLinks] = useState(false);
   const products = useSelector((state) => state.cart.products);
+  const [search, setSearch] = useState(false);
+  const [query, setQuery] = useState("");
+  const data = getData();
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
+  };
+
+  const handleSearch = (e) => {
+    setSearch(true);
+    setQuery(e.target.value.toLowerCase());
   };
 
   return (
@@ -52,6 +73,43 @@ const Navbar = () => {
         <h1>NecStore</h1>
       </Link>
       <div className={styles.content}>
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Rechercher un produit ..."
+            className={styles.input}
+            onChange={handleSearch}
+            style={
+              theme === "dark"
+                ? { backgroundColor: "#0D1520" }
+                : { backgroundColor: "#FBFDFF" }
+            }
+          />
+        </div>
+        {search && (
+          <div
+            className={styles.articleBox}
+            onClick={() => {
+              setSearch(false);
+            }}
+          >
+            {data
+              .filter((asd) => asd.title.toLowerCase().includes(query))
+              .map((item) => (
+                <div
+                  className={styles.listItem}
+                  key={item.id}
+                  style={
+                    theme === "dark"
+                      ? { backgroundColor: "#0D1520" }
+                      : { backgroundColor: "#FBFDFF" }
+                  }
+                >
+                  <Link href={`/produit/${item.slug}`}>{item.title}</Link>
+                </div>
+              ))}
+          </div>
+        )}
         <ThemeToggle />
         {showLinks ? (
           <CloseIcon

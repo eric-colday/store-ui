@@ -17,6 +17,33 @@
   gap: 20px;
 }
 
+.searchContainer {
+  border: 0.5px solid;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
+}
+
+.input {
+  border: none;
+  width: 100%;
+}
+
+.articleBox {
+  width: 197px;
+  margin-top: 9px;
+  border: 0.5px solid;
+  position: absolute;
+  top: 3rem;
+  z-index: 10;
+}
+
+.listItem {
+  padding: 5px;
+  cursor: pointer;
+}
+
 .links {
   display: flex;
   gap: 20px;
@@ -98,6 +125,15 @@
   }
   .link {
     font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .searchContainer {
+    border: none;
+  }
+  .input {
+    display: none;
   }
 }
 
