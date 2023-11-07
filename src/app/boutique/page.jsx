@@ -1,6 +1,5 @@
 import ProductCategory from "@/components/boutique/productCategory/ProductCategory";
 import ProductList from "@/components/boutique/productList/ProductList";
-import SelectOption from "@/components/boutique/selectOption/SelectOption";
 import React from "react";
 import styles from "./boutique.module.css";
 
@@ -18,18 +17,11 @@ const Boutique = ({ searchParams }) => {
         <p className={styles.desc}>
           Plongez dans un univers captivant où passion et expertise se
           rejoignent. Explorez nos produits, source d'inspiration, astuces et
-          conseils pour une vie épanouie.
+          conseils pour une vie épanouie. 
         </p>
       </div>
       <ProductCategory cat={cat} />
       <ProductList page={page} cat={cat} />
-      {/* <div className={styles.categorieContainer}>
-        <SelectOption
-          page={page}
-          cat={cat}
-        />
-        <ProductList page={page} cat={cat} />
-      </div> */}
     </div>
   );
 };
