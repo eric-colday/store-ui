@@ -40,7 +40,7 @@ const featuredCategory = () => {
             <Link href="/categories?cat=vestes">
               <div id="img3" className={styles.lilOverlay}></div>
               <img
-                src="/home/veste-matelassee.webp"
+                src="/home/veste-blazer.webp"
                 alt="img3"
                 className={styles.img}
               />

@@ -61,7 +61,7 @@ const Produit = ({ params }) => {
         </div>
       </div>
       <div className={styles.itemInfo}>
-        <h2 className={styles.itemTitle}>{data.name}</h2>
+        <h2 className={styles.itemTitle}>{data.title}</h2>
         <p className={styles.itemPrice}> {data.price} €</p>
         <p className={styles.itemDesc}>{data.description}</p>
         <div className={styles.itemFilter}>

@@ -1,15 +1,15 @@
 export const Products = [
   {
     id: 1,
-    title: "JEAN",
-    description: "Jean skinny",
-    price: "19.99",
+    title: "Pantalon en denim wide leg - Bleu",
+    description: "Ce pantalon donne un style décontracté à toutes vos tenues !",
+    price: "15,00",
     image: [
-      "/home/jean-flarebootcut.webp",
-      "/home/veste-matelassee.webp",
-      "/home/tennis-lacets.webp",
+      "/products/jeans/pantalon-en-denim.webp",
+      "/products/jeans/pantalon-en-denim2.webp",
+      "/products/jeans/pantalon-en-denim3.webp",
     ],
-    slug: "jean-skinny",
+    slug: "pantalon-en-denim-wide-leg-Bleu",
     catSlug: "jeans",
     cat: "jeans",
     size: ["S", "M", "L"],
@@ -82,7 +82,7 @@ export const CategoriesProducts = [
     id: 1,
     slug: "jeans",
     title: "Jeans",
-    img: "",
+    img: "../public/home/jean-flarebootcut.webp",
     Products: [
       {
         id: 1,
@@ -109,7 +109,7 @@ export const CategoriesProducts = [
     id: 2,
     slug: "t-shirts",
     title: "T-shirts",
-    img: "",
+    img: "../public/home/t-shirt-en-coton.webp",
     Products: [
       {
         id: 1,
@@ -136,7 +136,7 @@ export const CategoriesProducts = [
     id: 3,
     slug: "vestes",
     title: "Vestes",
-    img: "",
+    img: "../public/home/veste-blazer.webp",
     Products: [
       {
         id: 1,
@@ -163,7 +163,7 @@ export const CategoriesProducts = [
     id: 4,
     slug: "chaussures",
     title: "Chaussures",
-    img: "",
+    img: "../public/home/tennis-lacets.webp",
     Products: [
       {
         id: 1,
