@@ -12,9 +12,16 @@ import ProductSelected from "../productSelected/ProductSelected";
 
 const SelectOption = ({ page, cat }) => {
   const { theme } = useContext(ThemeContext);
-  const [filterColor, setFilterColor] = useState("");
-  const [filterSize, setFilterSize] = useState("");
+  const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("");
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilters({
+      ...filters,
+      [e.target.name]: value,
+    });
+  };
 
   return (
     <div className={styles.container}>
@@ -67,10 +74,9 @@ const SelectOption = ({ page, cat }) => {
                 <Select
                   labelId="demo-simple-select-label"
                   name="color"
-                  value={filterColor}
                   id="color"
                   label="Couleur"
-                  onChange={(e) => setFilterColor(e.target.value)}
+                  onChange={handleFilters}
                   style={
                     theme === "dark"
                       ? {
@@ -86,7 +92,7 @@ const SelectOption = ({ page, cat }) => {
                   <MenuItem value="red">red</MenuItem>
                   <MenuItem value="blue">blue</MenuItem>
                   <MenuItem value="yellow">yellow</MenuItem>
-                  <MenuItem value="yellow">Thirty</MenuItem>
+                  <MenuItem value="black">Black</MenuItem>
                 </Select>
               </FormControl>
             </Box>
@@ -135,10 +141,9 @@ const SelectOption = ({ page, cat }) => {
                 <Select
                   labelId="demo-simple-select-label"
                   name="size"
-                  value={filterSize}
                   id="size"
                   label="Taille"
-                  onChange={(e) => setFilterSize(e.target.value)}
+                  onChange={handleFilters}
                   style={
                     theme === "dark"
                       ? {
@@ -229,10 +234,11 @@ const SelectOption = ({ page, cat }) => {
           </Box>
         </div>
       </div>
-      <ProductSelected 
+      <ProductSelected
         cat={cat}
-        filterColor={filterColor}
-        filterSize={filterSize}
+        page={page}
+        filters={filters}
+        sort={sort}
       />
     </div>
   );

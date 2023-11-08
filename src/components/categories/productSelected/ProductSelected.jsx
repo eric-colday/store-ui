@@ -5,8 +5,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../selectOption/selectOption.module.css";
 
-const getData = (page, cat) => {
-  const data = cat ? Products.filter((item) => item.catSlug === cat) : Products;
+const getData = (cat) => {
+  const data = Products.filter((item) => item.catSlug === cat);
 
   if (data) {
     return data;
@@ -15,20 +15,31 @@ const getData = (page, cat) => {
   return notFound();
 };
 
-const ProductSelected = ({ page, cat, filterColor, filterSize, sort }) => {
-  const data = getData(page, cat);
+const ProductSelected = ({ cat, filters, sort }) => {
+  const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-//   useEffect(() => {
-//     cat &&
-//       setFilteredProducts(
-//         data.filter((item) =>
-//           Object.entries(filterColor && filterSize).every(([key, value]) =>
-//             item[key].includes(value)
-//           )
-//         )
-//       );
-//   }, [data, cat, filterColor, filterSize]);
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const data = getData(cat)
+        setProducts(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getProducts()
+  }, [cat])
+
+  useEffect(() => {
+      setFilteredProducts(
+        products.filter((item) =>
+          Object.entries(filters).every(([key, value]) =>
+            item[key].includes(value)
+          )
+        )
+      );
+  }, [products, filters]);
 
   useEffect(() => {
     if (sort === "newest") {
