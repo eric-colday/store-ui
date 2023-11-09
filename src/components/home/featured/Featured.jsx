@@ -32,7 +32,7 @@ const Featured = () => {
       </div>
       <div className={styles.containerProducts}>
         <div className={styles.grid}>
-          {data.map((item) => (
+          {data.slice(0, 4).map((item) => (
             <Link href={`/produit/${item.slug}`} key={item.id}>
               <div
                 className={styles.card}
