@@ -3,7 +3,7 @@ export const Products = [
     id: 1,
     title: "Pantalon en denim wide leg - Bleu",
     description: "Ce pantalon donne un style décontracté à toutes vos tenues !",
-    price: "15,00",
+    price: "15.00",
     image: [
       "/products/jeans/pantalon-en-denim.webp",
       "/products/jeans/pantalon-en-denim2.webp",
@@ -23,7 +23,7 @@ export const Products = [
     title: "T-shirt droit en jersey uni - blanc",
     description:
       "Celui qui s'associe aussi bien avec un jean qu’un pantalon plus habillé.",
-    price: "4,00",
+    price: "4.00",
     image: [
       "/products/t-shirts/t-shirt-droit-en-jersey.webp",
       "/products/t-shirts/t-shirt-droit-en-jersey2.webp",
@@ -43,7 +43,7 @@ export const Products = [
     title: "Veste esprit campus - Noir",
     description:
       "La veste esprit campus, un indispensable de votre dressing, en molleton gratté (doux et chaud) !",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/vestes/veste-esprit-campus.webp",
       "/products/vestes/veste-esprit-campus2.webp",
@@ -62,7 +62,7 @@ export const Products = [
     id: 4,
     title: "Chaussures de ville - Noir",
     description: "Chaussures de ville en cuir, à lacets, avec semelle en caoutchouc.",
-    price: "35,00",
+    price: "35.00",
     image: [
       "/products/chaussures/chaussures-de-ville-noir.webp",
       "/products/chaussures/chaussures-de-ville-noir2.webp",
@@ -139,7 +139,7 @@ export const Products = [
     id: 8,
     title: "T-shirt droit en jersey uni - blanc",
     description: "Best sellers* : L'incontournable T-shirt basique.",
-    price: "4,00",
+    price: "4.00",
     image: [
       "/products/t-shirts/t-shirt-droit.webp",
       "/products/t-shirts/t-shirt-droit2.webp",
@@ -159,7 +159,7 @@ export const Products = [
     title: "T-shirt droit en jersey uni - Noir",
     description:
       "Les meilleures ventes : L'incontournable pour un bon basique.",
-    price: "4,00",
+    price: "4.00",
     image: [
       "/products/t-shirts/t-shirt-uni-en-jersey.webp",
       "/products/t-shirts/t-shirt-uni-en-jersey2.webp",
@@ -178,7 +178,7 @@ export const Products = [
     id: 10,
     title: "T-shirt col V - noir",
     description: "Un basique très confortable !",
-    price: "6,00",
+    price: "6.00",
     image: [
       "/products/t-shirts/t-shirt-col-v.webp",
       "/products/t-shirts/t-shirt-col-v2.webp",
@@ -197,7 +197,7 @@ export const Products = [
     id: 11,
     title: "Gilet sans manches en sherpa - Marron",
     description: "Le gilet de base pour les plus petits et les plus grands.",
-    price: "12,00",
+    price: "12.00",
     image: [
       "/products/vestes/gilet-sans-manches.webp",
       "/products/vestes/gilet-sans-manches2.webp",
@@ -216,7 +216,7 @@ export const Products = [
     id: 12,
     title: "Veste en jean avec manches en molleton - Bleu",
     description: "Veste en jean avec manches en molleton - Bleu",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/vestes/veste-en-jean.webp",
       "/products/vestes/veste-en-jean2.webp",
@@ -235,7 +235,7 @@ export const Products = [
     id: 13,
     title: "Veste bi matière - Kaki",
     description: "Veste bi matière - Kaki",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/vestes/veste-bi-matiere.webp",
       "/products/vestes/veste-bi-matiere2.webp",
@@ -254,7 +254,7 @@ export const Products = [
     id: 14,
     title: "Bottines type chelsea - Noir",
     description: "Bottines type chelsea - Noir",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/chaussures/bottines-type-chelsea-noir.webp",
       "/products/chaussures/bottines-type-chelsea-noir2.webp",
@@ -273,7 +273,7 @@ export const Products = [
     id: 15,
     title: "Escarpins babies vernis - Noir",
     description: "Escarpins babies vernis - Noir",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/chaussures/escarpins-babies-vernis-noir.webp",
       "/products/chaussures/escarpins-babies-vernis-noir2.webp",
@@ -292,7 +292,7 @@ export const Products = [
     id: 16,
     title: "Chaussures de randonnée - kaki",
     description: "Chaussures de randonnée - kaki",
-    price: "25,00",
+    price: "25.00",
     image: [
       "/products/chaussures/chaussures-de-randonnee.webp",
       "/products/chaussures/chaussures-de-randonnee2.webp",

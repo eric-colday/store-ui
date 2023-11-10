@@ -110,7 +110,7 @@ const Navbar = () => {
               ))}
           </div>
         )}
-        <ThemeToggle />
+        <ThemeToggle /> 
         {showLinks ? (
           <CloseIcon
             onClick={handleShowLinks}
