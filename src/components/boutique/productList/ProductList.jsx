@@ -13,32 +13,41 @@ const getData = (page, cat) => {
     return data;
   }
 
-  return notFound(); 
+  return notFound();
 };
 
 const ProductList = ({ page, cat }) => {
   const data = getData(page, cat);
   const count = data.length;
 
-  const POST_PER_PAGE = 6;
+  const POST_PER_PAGE = 8;
 
-  const hasPrev = POST_PER_PAGE * (page - 1) > 0; 
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
-        {data.map((item) => (
-          <Link href={`/produit/${item.slug}`} key={item.id}>
-            <div className={styles.card}>
-              <img src={item.image[0]} alt="blog1" className={styles.cardImage} />
-              <div className={styles.cardContent}>
-                <h3 className={styles.h3}>{item.title}</h3>
-                <div>{item.price} € </div>
+        {data
+          .slice(
+            POST_PER_PAGE * (page - 1),
+            POST_PER_PAGE * (page - 1) + POST_PER_PAGE
+          )
+          .map((item) => (
+            <Link href={`/produit/${item.slug}`} key={item.id}>
+              <div className={styles.card}>
+                <img
+                  src={item.image[0]}
+                  alt="blog1"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardContent}>
+                  <h3 className={styles.h3}>{item.title}</h3>
+                  <div>{item.price} € </div>
+                </div>
               </div>
-            </div> 
-          </Link>
-        ))} 
+            </Link>
+          ))}
       </div>
       <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
     </div>
