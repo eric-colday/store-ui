@@ -23,7 +23,7 @@ const Commandes = () => {
         <h1 className={styles.cartTttle}>Commandes</h1>
         <div>
           {data.map((item) => (
-            <div key={item.id} className={styles.cartCont}>
+            <div key={item.id} className={styles.cartCont}>  
               <div className={styles.cartWrap}>
                 <p>Commande ID: {item.id}</p>
                 <p>
