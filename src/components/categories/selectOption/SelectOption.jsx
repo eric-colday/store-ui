@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeContext } from "@/context/ThemeContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 import React, { useContext, useState } from "react";
 import styles from "./selectOption.module.css";
 import Box from "@mui/material/Box";
