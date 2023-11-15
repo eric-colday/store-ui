@@ -1,6 +1,5 @@
 import ProductCategory from "../../components/boutique/productCategory/ProductCategory";
 import ProductList from "../../components/boutique/productList/ProductList";
-import Head from "next/head";
 import React from "react";
 import styles from "./boutique.module.css";
 
@@ -16,9 +15,6 @@ const Boutique = ({ searchParams }) => {
 
   return (
     <div>
-      <Head>
-        <meta name="robots" content="INDEX,FOLLOW" />
-      </Head>
       <div className={styles.container}>
         <div className={styles.content}>
           <h1 className={styles.h2}>

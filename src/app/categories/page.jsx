@@ -1,4 +1,4 @@
-import SelectOption from "@/components/categories/selectOption/SelectOption";
+import SelectOption from "../../components/categories/selectOption/SelectOption";
 import React from "react";
 import styles from "./categories.module.css";
 

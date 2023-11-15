@@ -1,6 +1,6 @@
 "use client";
 
-import { CategoriesProducts } from "@/data";
+import { CategoriesProducts } from "../../../data";
 import Link from "next/link";
 import React from "react";
 import styles from "./productCategory.module.css";

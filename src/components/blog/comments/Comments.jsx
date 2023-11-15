@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import styles from "./comments.module.css";
-import { ThemeContext } from "@/context/ThemeContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const Comments = () => {
   const { theme } = useContext(ThemeContext);

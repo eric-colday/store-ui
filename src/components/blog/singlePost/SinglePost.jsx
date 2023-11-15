@@ -6,7 +6,7 @@ import Link from "next/link";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Comments from "../comments/Comments";
-import Sidebar from "@/components/blog/sidebar/Sidebar";
+import Sidebar from "../../../components/blog/sidebar/Sidebar";
 
 const SinglePost = ({ data }) => {
   const [updateMode, setUpdateMode] = useState(false);

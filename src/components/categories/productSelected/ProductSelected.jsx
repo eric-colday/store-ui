@@ -1,6 +1,6 @@
 "use client";
 
-import { Products } from "@/data";
+import { Products } from "../../../data";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../selectOption/selectOption.module.css";

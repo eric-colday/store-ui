@@ -2,8 +2,8 @@
 
 import React, { useContext, useState } from "react";
 import styles from "./productInfos.module.css";
-import { ThemeContext } from "@/context/ThemeContext";
-import { addToCart } from "@/redux/cartReducer";
+import { ThemeContext } from "../../../context/ThemeContext";
+import { addToCart } from "../../../redux/cartReducer";
 import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useDispatch } from "react-redux";
 

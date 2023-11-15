@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { Posts } from "@/data";
-import SinglePost from "@/components/blog/singlePost/SinglePost";
+import { Posts } from "../../../data";
+import SinglePost from "../../../components/blog/singlePost/SinglePost";
 
 
 const getData = (slug) => {

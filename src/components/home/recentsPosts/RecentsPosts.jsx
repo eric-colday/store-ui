@@ -4,8 +4,8 @@ import React, { useContext } from "react";
 import styles from "./recentsPosts.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Posts } from "@/data";
-import { ThemeContext } from "@/context/ThemeContext";
+import { Posts } from "../../../data.js";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const getData = () => {
   const data = Posts;

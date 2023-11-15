@@ -1,7 +1,7 @@
 "use client";
 
-import Pagination from "@/components/pagination/Pagination";
-import { Products } from "@/data";
+import Pagination from "../../pagination/Pagination";
+import { Products } from "../../../data";
 import Link from "next/link";
 // import React, { useEffect, useState } from "react";
 import styles from "./productList.module.css";

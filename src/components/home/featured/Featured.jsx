@@ -1,9 +1,9 @@
 "use client";
 
-import { ThemeContext } from "@/context/ThemeContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 import React, { useContext } from "react";
 import styles from "./featured.module.css";
-import { Products } from "@/data.js";
+import { Products } from "../../../data.js";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 

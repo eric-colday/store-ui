@@ -1,6 +1,6 @@
 "use client";
 
-import { CategoriesPosts } from "@/data";
+import { CategoriesPosts } from "../../../data";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./sidebar.module.css";

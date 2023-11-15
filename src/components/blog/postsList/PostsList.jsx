@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./postsList.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Posts } from "@/data.js";
-import Pagination from "@/components/pagination/Pagination";
+import { Posts } from "../../../data";
+import Pagination from "../../pagination/Pagination";
 
 const getData = (page, cat) => {
   const data = cat ? Posts.filter((item) => item.catSlug === cat) : Posts;

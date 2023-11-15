@@ -1,14 +1,13 @@
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar.jsx";
 import { Inter } from "next/font/google";
-import { ThemeContextProvider } from "@/context/ThemeContext";
-import ThemeProvider from "@/providers/ThemeProvider";
+import { ThemeContextProvider } from "../context/ThemeContext.jsx";
+import ThemeProvider from "../providers/ThemeProvider.jsx";
 import "./globals.css";
-import Footer from "@/components/footer/Footer";
-import Newsletter from "@/components/newsletter/Newsletter";
+import Footer from "../components/footer/Footer";
+import Newsletter from "../components/newsletter/Newsletter";
 import Providers from "../redux/provider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 

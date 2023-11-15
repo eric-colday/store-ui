@@ -9,9 +9,9 @@ import ThemeToggle from "../themeToggle/ThemeToggle";
 import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import { Badge } from "@mui/material";
-import { ThemeContext } from "@/context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import { useSelector } from "react-redux";
-import { Products } from "@/data";
+import { Products } from "../../data.js";
 
 import { notFound } from "next/navigation";
 

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./postCategory.module.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CategoriesPosts } from "@/data";
+import { CategoriesPosts } from "../../../data";
 
 const getData = () => {
   const data = CategoriesPosts;
