@@ -32,6 +32,18 @@ const Produit = ({ params }) => {
     name: data.title,
     image: data.image,
     description: data.description, 
+    brand: {
+      "@type": "Brand",
+      name: "NECSTORE",
+    },
+
+    offers: {
+      "@type": "Offer",
+      url: "https://necstore.vercel.app/produit/"+ data.slug,
+      priceCurrency: "EUR",
+      price: data.price,
+      priceValidUntil: data.createdAt,
+    },
   };
 
   return (
