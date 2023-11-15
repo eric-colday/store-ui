@@ -1,19 +1,19 @@
 export default function sitemap(){
   return [
     {
-      url: 'http://localhost:3000/',
+      url: 'https://necstore.vercel.app/',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
     },
     {
-      url: 'http://localhost:3000/boutique',
+      url: 'https://necstore.vercel.app/boutique',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
     },
     {
-      url: 'http://localhost:3000/blog',
+      url: 'https://necstore.vercel.app/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,

@@ -10,6 +10,6 @@ export default function robots() {
         disallow: '/boutique?cat=',
         disallow: '/blog?cat=',
       },
-      sitemap: 'http://localhost:3000/sitemap.xml',
+      sitemap: 'https://necstore.vercel.app/sitemap.xml',
     }
   }
