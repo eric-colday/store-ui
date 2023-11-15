@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { Posts } from "../../../data";
 import SinglePost from "../../../components/blog/singlePost/SinglePost";
 
-
 const getData = (slug) => {
   const data = Posts.find((item) => item.slug === slug);
 
@@ -18,7 +17,7 @@ export async function generateMetadata({ params }) {
   const data = await getData(params.slug);
   return {
     title: data.title,
-    description: data.description, 
+    description: data.description,
   };
 }
 
@@ -26,9 +25,21 @@ const SinplePost = ({ params }) => {
   const { slug } = params;
   const data = getData(slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: data.title,
+    image: data.image,
+    description: data.description,
+  };
+
   return (
     <div>
-      <SinglePost data={data} />   
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <SinglePost data={data} />
     </div>
   );
 };

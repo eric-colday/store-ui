@@ -13,6 +13,7 @@ const Boutique = ({ searchParams }) => {
   const page = parseInt(searchParams.page) || 1;
   const { cat } = searchParams;
 
+
   return (
     <div>
       <div className={styles.container}>

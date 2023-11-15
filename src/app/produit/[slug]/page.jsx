@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   const data = await getData(params.slug);
   return {
     title: data.title,
-    description: data.description, 
+    description: data.description,
   };
 }
 
@@ -26,10 +26,22 @@ const Produit = ({ params }) => {
   const { slug } = params;
   const data = getData(slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: data.title,
+    image: data.image,
+    description: data.description, 
+  };
+
   return (
     <div className={styles.item}>
-      <Images data={data}/>
-      <ProductInfos data={data}/>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Images data={data} />
+      <ProductInfos data={data} />
     </div>
   );
 };
