@@ -10,7 +10,7 @@ const Comments = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Comments</h1>
+      <h2 className={styles.title}>Comments</h2>
       <div className={styles.comments}>
         <div className={styles.comment}>
           <div className={styles.user}>

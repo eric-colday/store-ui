@@ -69,7 +69,7 @@ const Slider = () => {
         </div>
       </div>
       <div className={styles.bannerContent}>
-        <h2 className={styles.h2}>NecStore</h2>
+        <h1 className={styles.h1}>NecStore</h1>
         <p className={styles.p}>
           Une collection tendance de t-shirts, jeans et vestes pour un style
           unique. Exprimez-vous avec notre mode de qualité !

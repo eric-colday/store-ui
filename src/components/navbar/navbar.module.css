@@ -51,7 +51,7 @@
 
 .logo {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 30px;
   color: #468bff;
 }
 
@@ -140,5 +140,11 @@
 @media screen and (max-width: 425px) {
   .content {
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  .logo {
+    font-size: 20px;
   }
 }

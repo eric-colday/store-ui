@@ -38,11 +38,11 @@ const PostsList = ({ page, cat }) => {
                   <span>{item.createdAt.substring(0, 10)} - </span>
                   <span className={styles.category}> {item.catSlug}</span>
                 </div>
-                <h3 className={styles.h3}>
+                <h2 className={styles.h3}>
                   {item.title.length > 10
                     ? `${item.title.slice(0, 28)}...`
                     : item.title}
-                </h3>
+                </h2>
                 <p className={styles.p}>
                   {item.description.length > 50
                     ? `${item.description.slice(0, 47)}...`

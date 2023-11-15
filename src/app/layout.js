@@ -7,7 +7,8 @@ import Footer from "@/components/footer/Footer";
 import Newsletter from "@/components/newsletter/Newsletter";
 import Providers from "../redux/provider";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,11 @@ export default function RootLayout({ children }) {
                 <div className="container">{children}</div>
                 <Newsletter />
                 <Footer />
-                <ToastContainer position="bottom-right" theme="dark" autoClose={3000}/>
+                <ToastContainer
+                  position="bottom-right"
+                  theme="dark"
+                  autoClose={3000}
+                />
               </main>
             </Providers>
           </ThemeProvider>

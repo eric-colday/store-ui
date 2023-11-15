@@ -1,6 +1,4 @@
 import React from "react";
-import styles from "./sinplePost.module.css";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Posts } from "@/data";
 import SinglePost from "@/components/blog/singlePost/SinglePost";
@@ -16,13 +14,21 @@ const getData = (slug) => {
   return notFound();
 };
 
+export async function generateMetadata({ params }) {
+  const data = await getData(params.slug);
+  return {
+    title: data.title,
+    description: data.description, 
+  };
+}
+
 const SinplePost = ({ params }) => {
   const { slug } = params;
   const data = getData(slug);
 
   return (
     <div>
-      <SinglePost data={data} />  
+      <SinglePost data={data} />   
     </div>
   );
 };

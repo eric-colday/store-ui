@@ -92,7 +92,7 @@ const SinglePost = ({ data }) => {
                 onChange={(e) => setDesc(e.target.value)}
               />
             ) : (
-              <p className={styles.singlePostDesc}>{data.description} </p>
+              <p className={styles.singlePostDesc}>{data.content} </p>
             )}
             <button className={styles.singlePostButton} onClick={handleUpdate}>
               Update

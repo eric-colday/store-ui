@@ -42,7 +42,7 @@ const ProductList = ({ page, cat }) => {
                   className={styles.cardImage}
                 />
                 <div className={styles.cardContent}>
-                  <h3 className={styles.h3}>{item.title}</h3>
+                  <h2 className={styles.h3}>{item.title}</h2>
                   <div>{item.price} € </div>
                 </div>
               </div>

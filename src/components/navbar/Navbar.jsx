@@ -70,7 +70,7 @@ const Navbar = () => {
       }
     >
       <Link href="/" className={styles.logo}>
-        <h1>NecStore</h1>
+        <span>NecStore</span>
       </Link>
       <div className={styles.content}>
         <div className={styles.searchContainer}>
