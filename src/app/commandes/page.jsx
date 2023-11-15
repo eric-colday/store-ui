@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./commandes.module.css";
-import { Orders } from "@/data";
+import { Orders } from "../../data.js";
 
 const getData = () => {
   const data = Orders;

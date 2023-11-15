@@ -1,5 +1,5 @@
-import PostCategory from "@/components/blog/postCategory/PostCategory";
-import PostsList from "@/components/blog/postsList/PostsList";
+import PostCategory from "../../components/blog/postCategory/PostCategory";
+import PostsList from "../../components/blog/postsList/PostsList";
 import React from "react";
 import styles from "./blog.module.css";
 

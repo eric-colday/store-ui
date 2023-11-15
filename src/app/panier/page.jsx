@@ -9,7 +9,7 @@ import {
   increase,
   removeItem,
   resetCart,
-} from "@/redux/cartReducer.js";
+} from "../../redux/cartReducer.js";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 

@@ -1,5 +1,5 @@
-import ProductCategory from "@/components/boutique/productCategory/ProductCategory";
-import ProductList from "@/components/boutique/productList/ProductList";
+import ProductCategory from "../../components/boutique/productCategory/ProductCategory";
+import ProductList from "../../components/boutique/productList/ProductList";
 import Head from "next/head";
 import React from "react";
 import styles from "./boutique.module.css";
