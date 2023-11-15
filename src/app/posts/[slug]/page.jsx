@@ -27,10 +27,15 @@ const SinplePost = ({ params }) => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: data.title,
+    "@type": "NewsArticle",
+    headline: data.title,
     image: data.image,
-    description: data.description,
+    datePublished: data.createdAt,
+    dateModified: data.createdAt,
+    author: {
+      "@type": "Person",
+      name: "NECSTORE",
+    },
   };
 
   return (
