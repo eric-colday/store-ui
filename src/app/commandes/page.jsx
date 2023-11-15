@@ -32,7 +32,7 @@ const Commandes = () => {
                   {new Date(item.createdAt).toLocaleDateString("fr-FR", {
                     year: "numeric",
                     month: "long",
-                    day: "numeric",
+                    day: "numeric",  
                   })}
                 </p>
                 <p className={styles.cartTotal}>Total: {item.total}€</p>
