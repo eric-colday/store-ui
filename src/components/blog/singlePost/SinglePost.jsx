@@ -97,11 +97,6 @@ const SinglePost = ({ data }) => {
             <button className={styles.singlePostButton} onClick={handleUpdate}>
               Update
             </button>
-            {/* <Button 
-          text="Update"
-          onClick={handleUpdate}
-          url="/"
-        /> */}
           </div>
         </div>
         <Sidebar/> 

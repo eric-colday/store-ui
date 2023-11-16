@@ -41,6 +41,16 @@ const links = [
     title: "Blog",
     url: "/blog",
   },
+  {
+    id: 4,
+    title: "Dashboard",
+    url: "https://necadmin-ui.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Contact",
+    url: "/#",
+  },
 ];
 
 const Navbar = () => {
